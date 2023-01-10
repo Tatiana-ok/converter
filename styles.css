@@ -1,0 +1,154 @@
+/* basic */
+
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: #212121;
+    background-color: #ffffff;
+    letter-spacing: 0.03em;
+  }
+  
+  a {
+    text-decoration: none;
+    font-style: normal;
+  }
+    
+  img {
+    display: block;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  button {
+    padding: 0;
+  }
+
+  .container{
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .btn-tpl{
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #d4a752;
+    border: 2px solid #1a1918;
+    cursor: pointer;
+  }
+
+  /* Task 1 */
+
+  .background{
+    background-color:#e7e6e2;
+  }
+
+  .back-btn{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 20px;
+    background-color: #d4a752;
+  }
+
+  .back-btn > a {
+    color: #ffffff;
+  }
+
+  .arrow-left{
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+  }
+
+  .title{
+    font-size: 24px;
+  }
+
+  .columns{
+    display: flex;
+    flex-direction: column;
+    /* align-items: baseline; */
+    justify-content: flex-end;
+    margin-right: 15px;
+  }
+
+  .columns > input {
+    width: 200px;
+  }
+
+  .box{
+    display: flex;
+  }
+
+  .arrow-right{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+
+  .plusBtn{
+    width: 40px;
+    height: 22px;
+    background-color: #d4a752;
+    cursor: pointer;
+  }
+
+  /* Task 2 */
+
+    .add-form{
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .btn-add{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .contacts-list{
+      list-style: none;
+    }
+
+    .contacts-item{
+      display: flex;
+      align-items: baseline;
+    }
+
+    .contacts-key{
+      margin-right: 10px;
+    }
+
+    .arrow-update{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn-update{
+      width: 25px;
+      height: 25px;
+      background-color: #d4a752;
+      margin-left: 15px;
+      cursor: pointer;
+    }

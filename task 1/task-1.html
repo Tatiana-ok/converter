@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Task 1</title>
+</head>
+<body class="background">
+    <main class="container background-content">
+        <button class="back-btn" type="button">
+            <img class="arrow-left" src="https://img.icons8.com/material-sharp/24/000000/chevron-left.png"/>
+            <a href="../index.html">На головну</a>
+        </button>
+        <h2>Розробити застосунок для конвертації між одиницями вимірювання відстані з підтримкою метричної та імперської систем мір довжини. За замовчуванням, програма повинна розпізнавати метри (m), сантиметри (cm), дюйми (in) та фути (ft), та підтримувати конвертацію між будь-якими одиницями. Також необхідно реалізувати можливість розширювати список одиниць за допомогою JSON файлу.</h2>
+        <h1 class="title">Застосунок для конвертації між одиницями вимірювання відстані</h1>
+        <div>
+            <form id="form" name="converter">
+                <div class="box">
+                    <div class="columns">
+                        <label for="distance-value">Введіть значення</label>
+                        <input type="text" name="distance" id="distance-value" placeholder="1.00">
+                    </div>
+                    <div class="columns">
+                        <label style="width: 200px;" for="unit">Введіть одиницю вимірювання</label>
+                        <select id="select1" class="input-v" size="1" name="method">
+                            <option disabled></option>
+                            <option value="m">m</option>
+                            <option value="cm">cm</option>
+                            <option value="in">in</option>
+                            <option value="ft">ft</option>
+                            <option value="chain">chain</option>
+                            <option value="furlong">furlong</option>
+                            <option value="mile">mile</option>
+                            <option value="yard">yard</option>
+                        </select>
+                    </div>
+                    <img class="arrow-right" src="https://img.icons8.com/windows/32/000000/arrow.png"/>
+                    <div class="columns">
+                        <label for="convert">Конвертувати в</label>
+                        <select id="select2" class="input-v" size="1" name="method">
+                            <option disabled></option>
+                            <option value="m">m</option>
+                            <option value="cm">cm</option>
+                            <option value="in">in</option>
+                            <option value="ft">ft</option>
+                            <option value="chain">chain</option>
+                            <option value="furlong">furlong</option>
+                            <option value="mile">mile</option>
+                            <option value="yard">yard</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="submit" class="btn-tpl" value="Конвертувати">
+            </form>
+        </div>
+        <div>
+            <div class="columns">
+                <label for="result">Результат</label>
+                <input type="text" name="result" id="result">
+            </div>
+        </div>
+    </main>
+</body>
+    <script type="module" src="./task-1.js"></script>
+</html>

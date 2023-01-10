@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Task 2</title>
+</head>
+<body class="background">
+    <main class="container">
+        <button class="back-btn" type="button">
+            <img class="arrow-left" src="https://img.icons8.com/material-sharp/24/000000/chevron-left.png"/>
+            <a href="../index.html">На головну</a>
+        </button>
+        <h2>Розробити простий застосунок для сортування та відбору даних за заздалегідь заданими правилами. Програма повинна вміти працювати зі списками JSON об'єктів довільної структури, відбирати об'єкти, які містять ключі з певними значеннями, а також сортувати об'єкти за значеннями, використовуючи природний порядок сортування.</h2>
+        <h1>Застосунок для сортування та відбору даних</h1>
+        <div style="display: flex;">
+            <div  style="margin-right: 120px;">
+                <div>
+                    <form id="filterForm" name="converter">
+                        <h2>Filter</h2>
+                        <p>Filter conditions</p>
+                        <p><select class="input-v" size="3" name="method">
+                            <option disabled>Select method</option>
+                            <option value="Include">Include</option>
+                            <option value="Exclude">Exclude</option>
+                           </select>
+                        </p>
+                        <label for="">
+                            <p>Key</p>
+                            <input type="text" class="input-v" />
+                        </label>
+                        <label for="">
+                            <p>Value</p>
+                            <input type="text" class="input-v" />
+                        </label>
+                        <label for="">
+                            <p style="font-style: italic; font-weight: 500;">Sort by:</p>
+                            <input type="text" class="input-v" />
+                        </label>
+                        <input type="submit" class="btn-tpl" value="Filter">
+                    </form>
+                </div>
+                <div>
+                    <div style="display: flex; align-items: baseline;"><h2>Contacts</h2><button type="button" id="first-btn-update" class="btn-update"><img class="arrow-update" src="https://img.icons8.com/small/16/000000/rotate.png"/></button></div>
+                    <ul class="contacts-list"></ul>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <form id="filterFormSecond" name="converter">
+                        <h2>Filter</h2>
+                        <p>Filter conditions</p>
+                        <p><select class="input-v" size="3" name="method">
+                            <option disabled>Select method</option>
+                            <option value="Include">Include</option>
+                            <option value="Exclude">Exclude</option>
+                           </select>
+                        </p>
+                        <label for="">
+                            <p>Key</p>
+                            <input type="text" class="input-v"/>
+                        </label>
+                        <label for="">
+                            <p>Value</p>
+                            <input type="text" class="input-v"/>
+                        </label>
+                        <label for="">
+                            <p style="font-style: italic; font-weight: 500;">Sort by:</p>
+                            <input type="text" class="input-v"/>
+                        </label>
+                        <input type="submit" class="btn-tpl" value="Filter">
+                    </form>
+                </div>
+                <div>
+                    <div style="display: flex; align-items: baseline;"><h2>Contacts</h2><button type="button" id="second-btn-update" class="btn-update"><img class="arrow-update" src="https://img.icons8.com/small/16/000000/rotate.png"/></button></div>
+                    <ul class="contacts-list-second"></ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script type="module" src="./task-2.js"></script>
+</html>
