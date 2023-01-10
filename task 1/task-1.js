@@ -9,16 +9,12 @@ const select1 = document.getElementById('select1');
 const select2 = document.getElementById('select2');
 
 
-import * as fs from 'fs';
+// import * as fs from 'fs';
 
 
 let dataInit = {
     "distance": { "measure": "", "value": 0 },
     "convert_to": ""
-};
-let dataResult = {
-    "measure": "",
-    "value": 0
 };
 
 //Получение данных от пользователя
@@ -37,31 +33,31 @@ convertForm.onsubmit = function (event) {
 let convertToM = function (data) {
     data.distance.measure && data.distance.value ? valuesOfMeasures.find(([key, value]) => {
         if (key === data.distance.measure) {
-            dataResult.value = data.distance.value / value
+            dataInit.distance.value = data.distance.value / value
         }
     }) : alert('Недопустима величина');
-    data.distance.measure = "m";
-    data.distance.value = dataResult.value.toFixed(2);
-    data.convert_to == 'm' ? setResult(data) : convert_to_measure(data);
-    return data;
+    dataInit.distance.measure = "m";
+    dataInit.distance.value = dataInit.distance.value.toFixed(2);
+    data.convert_to == 'm' ? setResult(dataInit) : convert_to_measure(dataInit);
+    return dataInit;
 };
 
 let convert_to_measure = function (data) {
     data.distance.measure && data.convert_to ? valuesOfMeasures.find(([key, value]) => {
         if (key === data.convert_to) {
-            dataResult.value = data.distance.value * value
+            dataInit.distance.value = data.distance.value * value
         }
     }) : alert('Недопустима величина');
-    dataResult.value = dataResult.value.toFixed(2);
-    dataResult.measure = data.convert_to;
-    setResult(dataResult);
-    return dataResult;
+    dataInit.distance.value = dataInit.distance.value.toFixed(2);
+    dataInit.distance.measure = data.convert_to;
+    setResult(dataInit);
+    return dataInit;
 };
 
 // Запись результата
 
-const setResult = function (dataResult) {
-    resultInput.value = `${dataResult.value} ${dataResult.measure}`;
+const setResult = function (dataInit) {
+    resultInput.value = `${dataInit.distance.value} ${dataInit.distance.measure}`;
     return;
 };
 
